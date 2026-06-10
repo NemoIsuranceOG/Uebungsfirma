@@ -1,0 +1,260 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --text: #17202a;
+  --muted: #647082;
+  --line: #dbe1ea;
+  --primary: #0f766e;
+  --primary-dark: #115e59;
+  --accent: #eab308;
+  --shadow: 0 18px 45px rgba(20, 32, 44, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px clamp(18px, 4vw, 56px);
+  background: rgba(247, 248, 251, 0.88);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(18px);
+}
+
+.brand,
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.brand {
+  gap: 10px;
+  font-weight: 800;
+}
+
+.brand-mark {
+  display: inline-grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--primary);
+  color: white;
+}
+
+.site-nav {
+  gap: 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.site-nav a:hover {
+  color: var(--primary-dark);
+}
+
+.hero {
+  display: grid;
+  min-height: 72vh;
+  align-items: center;
+  padding: clamp(64px, 10vw, 120px) clamp(18px, 4vw, 56px);
+  background:
+    linear-gradient(115deg, rgba(15, 118, 110, 0.96), rgba(17, 94, 89, 0.78)),
+    url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1800&q=80") center/cover;
+  color: white;
+}
+
+.hero-content {
+  width: min(760px, 100%);
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.section h2 {
+  margin: 0;
+  letter-spacing: 0;
+  line-height: 1.05;
+}
+
+.hero h1 {
+  max-width: 12ch;
+  font-size: clamp(3.1rem, 8vw, 6.8rem);
+}
+
+.hero p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+
+.hero-actions,
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-actions {
+  margin-top: 32px;
+}
+
+.button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 11px 18px;
+  font-weight: 760;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: var(--accent);
+  color: #1d2430;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.13);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+}
+
+.section {
+  padding: clamp(56px, 8vw, 96px) clamp(18px, 4vw, 56px);
+}
+
+.section-heading {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.section h2 {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.card {
+  min-height: 190px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.card p,
+.split p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(280px, 1.2fr);
+  gap: clamp(24px, 6vw, 80px);
+  align-items: start;
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+
+.split p {
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+}
+
+.contact {
+  justify-content: space-between;
+  background: #17202a;
+  color: white;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 22px clamp(18px, 4vw, 56px);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 800px) {
+  .site-header,
+  .site-nav,
+  .split,
+  .contact,
+  .site-footer {
+    align-items: flex-start;
+  }
+
+  .site-header,
+  .site-nav,
+  .split,
+  .contact {
+    flex-direction: column;
+  }
+
+  .site-nav {
+    gap: 12px;
+  }
+
+  .hero {
+    min-height: 68vh;
+  }
+
+  .cards,
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
