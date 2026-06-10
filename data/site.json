@@ -1,21 +1,71 @@
 {
-  "eyebrow": "Uebungsfirma",
-  "headline": "Nemo Insurance OG",
-  "intro": "Ein sauberer Startpunkt fuer die Website. Inhalte und Struktur koennen direkt ueber GitHub gepflegt werden.",
-  "about": "Hier kommt spaeter die genaue Beschreibung der Uebungsfirma hinein. Die Inhalte sind bewusst in einer eigenen Datei gespeichert, damit sie versioniert und einfach angepasst werden koennen.",
-  "contactEmail": "office@example.com",
-  "services": [
+  "company": {
+    "name": "NEMO Insurance OG",
+    "industry": "Versicherung / Berater in Versicherungsangelegenheiten",
+    "address": "Karl-Schönherr-Straße 2, Handelsakademie Innsbruck",
+    "phone": "0512 / 581007 - 20 oder 21",
+    "fax": "0512 / 581007 - 32",
+    "email": "nemo3018@uebungsfirmen.at",
+    "uid": "ATU70213510",
+    "registerNumber": "3018",
+    "slogan": "Wir sind das, was ihr sucht!"
+  },
+  "statements": [
+    "Unsere Kunden stehen im Mittelpunkt.",
+    "Wir schaffen Sicherheit durch individuelle Versicherungslösungen.",
+    "Wir begleiten Familien und Unternehmen langfristig und zuverlässig.",
+    "Wir machen Versicherungen einfach, transparent und fair."
+  ],
+  "values": [
+    "Verantwortung",
+    "Zuverlässigkeit",
+    "Professionalität",
+    "Nachhaltigkeit",
+    "Ehrlichkeit",
+    "Kundennähe"
+  ],
+  "products": [
     {
-      "title": "Beratung",
-      "text": "Platzhalter fuer euer erstes Angebot oder eure wichtigste Leistung."
+      "id": "handy",
+      "name": "Handyversicherung",
+      "slogan": "Immer erreichbar, immer geschützt",
+      "description": "Schutz für Smartphones im Alltag - vom Displaybruch bis zum All-In-Paket.",
+      "type": "phone",
+      "tariffs": [
+        { "name": "Displaybruch", "coverage": "bis 200 €", "deductible": "40 €", "premium": "2,50 € / 1,75 €" },
+        { "name": "Wasserschaden", "coverage": "bis 300 €", "deductible": "60 €", "premium": "2,75 € / 2,00 €" },
+        { "name": "Akku-Defekt", "coverage": "bis 100 €", "deductible": "20 €", "premium": "1,75 € / 1,00 €" },
+        { "name": "Diebstahl", "coverage": "bis 700 €", "deductible": "140 €", "premium": "3,00 € / 2,00 €" },
+        { "name": "All-In-Paket", "coverage": "bis Gerätepreis", "deductible": "75 €", "premium": "7,99 € / 5,49 €" }
+      ]
     },
     {
-      "title": "Versicherung",
-      "text": "Platzhalter fuer Produkte, Services oder Schwerpunkte der Uebungsfirma."
+      "id": "laptop",
+      "name": "Laptopversicherung",
+      "slogan": "Immer einsatzbereit, immer geschützt",
+      "description": "Absicherung für Schule, Arbeit und Unternehmen - zuverlässig und klar kalkulierbar.",
+      "type": "laptop",
+      "tariffs": [
+        { "name": "Displaybruch", "coverage": "bis 500 €", "deductible": "75 €", "premium": "3,00 € / 2,25 €" },
+        { "name": "Wasserschaden", "coverage": "bis 700 €", "deductible": "150 €", "premium": "3,00 € / 2,00 €" },
+        { "name": "Akku-Defekt", "coverage": "bis 200 €", "deductible": "40 €", "premium": "2,25 € / 1,50 €" },
+        { "name": "Diebstahl", "coverage": "bis 1.000 €", "deductible": "200 €", "premium": "5,00 € / 3,50 €" },
+        { "name": "All-In-Paket", "coverage": "bis Gerätepreis", "deductible": "120 €", "premium": "10,50 € / 7,50 €" }
+      ]
     },
     {
-      "title": "Service",
-      "text": "Platzhalter fuer Kontakt, Betreuung oder interne Arbeitsablaeufe."
+      "id": "tablet",
+      "name": "Tabletversicherung",
+      "slogan": "Immer flexibel, immer geschützt",
+      "description": "Flexible Absicherung für mobile Arbeit, Lernen, Präsentationen und Alltag.",
+      "type": "tablet",
+      "tariffs": [
+        { "name": "Displaybruch", "coverage": "bis 400 €", "deductible": "50 €", "premium": "2,00 € / 1,50 €" },
+        { "name": "Wasserschaden", "coverage": "bis 600 €", "deductible": "100 €", "premium": "2,50 € / 1,75 €" },
+        { "name": "Akku-Defekt", "coverage": "bis 150 €", "deductible": "30 €", "premium": "2,00 € / 1,25 €" },
+        { "name": "Diebstahl", "coverage": "bis 800 €", "deductible": "150 €", "premium": "4,00 € / 3,00 €" },
+        { "name": "All-In-Paket", "coverage": "bis Gerätepreis", "deductible": "90 €", "premium": "8,99 € / 6,00 €" }
+      ]
     }
   ]
 }
