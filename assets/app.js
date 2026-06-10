@@ -74,7 +74,7 @@ function createProductCard(product) {
   const action = document.createElement("button");
 
   card.className = "product-card";
-  visual.className = "product-visual";
+  visual.className = `product-visual product-visual-${product.type || "default"}`;
   content.className = "product-content";
   kicker.className = "product-kicker";
   table.className = "product-table";
@@ -82,7 +82,7 @@ function createProductCard(product) {
   action.className = "button button-primary";
   action.type = "button";
 
-  visual.innerHTML = getProductIllustration(product.type);
+  visual.setAttribute("aria-hidden", "true");
   kicker.textContent = product.slogan || "Versicherungsschutz";
   title.textContent = product.name || "Produkt";
   description.textContent = product.description || "Flexible Versicherungslösung von NEMO Insurance.";
@@ -99,10 +99,10 @@ function createProductCard(product) {
 function buildTariffTable(tariffs) {
   const rows = tariffs.map((tariff) => `
     <tr>
-      <td>${escapeHtml(tariff.name)}</td>
-      <td>${escapeHtml(tariff.coverage)}</td>
-      <td>${escapeHtml(tariff.deductible)}</td>
-      <td>${escapeHtml(tariff.premium)}</td>
+      <td data-label="Tarif">${escapeHtml(tariff.name)}</td>
+      <td data-label="Leistung">${escapeHtml(tariff.coverage)}</td>
+      <td data-label="Selbstbehalt">${escapeHtml(tariff.deductible)}</td>
+      <td data-label="Prämie">${escapeHtml(tariff.premium)}</td>
     </tr>
   `).join("");
 
@@ -112,21 +112,6 @@ function buildTariffTable(tariffs) {
     </thead>
     <tbody>${rows}</tbody>
   `;
-}
-
-function getProductIllustration(type) {
-  const shared = "fill='none' stroke='#20242a' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'";
-  const screen = "fill='url(#screen)' stroke='#20242a' stroke-width='5'";
-
-  if (type === "laptop") {
-    return `<svg viewBox="0 0 180 140" aria-hidden="true"><defs><linearGradient id="screen" x1="0" x2="1"><stop stop-color="#fff1df"/><stop offset="1" stop-color="#e7f4f2"/></linearGradient></defs><rect x="28" y="20" width="124" height="82" rx="8" ${screen}/><path d="M14 115h152l-12 13H26z" fill="#ff980f"/><path d="M74 115h32" ${shared}/><path d="M84 54l13 13 27-30" stroke="#0f766e" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-  }
-
-  if (type === "tablet") {
-    return `<svg viewBox="0 0 180 140" aria-hidden="true"><defs><linearGradient id="screen" x1="0" x2="1"><stop stop-color="#fff1df"/><stop offset="1" stop-color="#eef1f5"/></linearGradient></defs><rect x="45" y="12" width="90" height="116" rx="17" ${screen}/><path d="M83 113h14" ${shared}/><path d="M70 48h40M70 66h28" stroke="#ff980f" stroke-width="7" stroke-linecap="round"/><path d="M122 30l22 10v24c0 22-12 34-22 39-10-5-22-17-22-39V40z" fill="#0f766e" opacity="0.16" stroke="#0f766e" stroke-width="5"/></svg>`;
-  }
-
-  return `<svg viewBox="0 0 180 140" aria-hidden="true"><defs><linearGradient id="screen" x1="0" x2="1"><stop stop-color="#fff1df"/><stop offset="1" stop-color="#eef1f5"/></linearGradient></defs><rect x="63" y="10" width="58" height="118" rx="18" ${screen}/><path d="M84 113h16" ${shared}/><path d="M75 42h34M75 60h24" stroke="#ff980f" stroke-width="6" stroke-linecap="round"/><path d="M137 32l18 8v20c0 18-10 28-18 33-9-5-18-15-18-33V40z" fill="#0f766e" opacity="0.16" stroke="#0f766e" stroke-width="5"/></svg>`;
 }
 
 function selectProduct(productName) {
