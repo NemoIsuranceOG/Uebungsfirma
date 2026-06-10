@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" role="img" aria-labelledby="title desc">
+  <title id="title">NEMO Insurance Logo</title>
+  <desc id="desc">Minimalistischer Fisch in Orange und Grau mit NEMO Insurance Schriftzug.</desc>
+  <defs>
+    <linearGradient id="fishOrange" x1="120" y1="260" x2="850" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f7a623"/>
+      <stop offset="1" stop-color="#ff8a00"/>
+    </linearGradient>
+    <linearGradient id="fishGray" x1="80" y1="90" x2="720" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b9b6ae"/>
+      <stop offset="1" stop-color="#777b80"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M78 88c82 118 186 108 306 36 150-89 268-129 409-72 66 27 118 76 151 137-37 64-92 111-164 137-145 52-268 4-415-91-119-77-222-80-287 38" stroke="url(#fishGray)" stroke-width="8" opacity="0.72"/>
+    <path d="M154 160c79 13 151-10 231-57 153-90 273-119 405-60 63 28 115 74 153 135l-18 14 18 15c-38 61-90 107-153 135-132 59-252 30-405-60-80-47-152-70-231-57" stroke="url(#fishOrange)" stroke-width="15"/>
+    <path d="M640 144c13 49 45 89 92 112" stroke="url(#fishGray)" stroke-width="9" opacity="0.72"/>
+    <path d="M785 132c-25 10-31 45-5 58 8 4 19 5 28 1-17-11-18-45-1-58-7-4-15-5-22-1Z" fill="#ff9b12" stroke="none"/>
+  </g>
+  <text x="94" y="322" fill="#20242a" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="800" letter-spacing="0">NEMO Insurance</text>
+  <text x="96" y="350" fill="#73777d" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">Wir sind das, was ihr sucht!</text>
+</svg>
