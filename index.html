@@ -3,68 +3,242 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Website der Nemo Uebungsfirma" />
-    <title>Nemo Uebungsfirma</title>
+    <meta name="description" content="NEMO Insurance OG bietet digitale, faire Versicherungen für Handy, Laptop und Tablet. Versicherungsschutz einfach online anfragen." />
+    <meta name="theme-color" content="#ff980f" />
+    <meta property="og:title" content="NEMO Insurance OG" />
+    <meta property="og:description" content="Versicherungsschutz, der einfach verständlich ist. Transparent, fair und digital." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/logo.svg" />
+    <title>NEMO Insurance OG | Digitale Geräteversicherung</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="Nemo Uebungsfirma Startseite">
-        <span class="brand-mark">N</span>
-        <span>Nemo Uebungsfirma</span>
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#home" aria-label="NEMO Insurance Startseite">
+        <img src="assets/logo.svg" alt="NEMO Insurance" />
       </a>
-      <nav class="site-nav" aria-label="Hauptnavigation">
-        <a href="#angebot">Angebot</a>
-        <a href="#ueber-uns">Ueber uns</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Menü öffnen</span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation" data-nav>
+        <a href="#produkte">Produkte</a>
+        <a href="#antrag">Antrag</a>
+        <a href="#ueber-uns">Über uns</a>
         <a href="#kontakt">Kontakt</a>
       </nav>
     </header>
 
-    <main id="home">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-content">
-          <p class="eyebrow" data-content="eyebrow">Uebungsfirma</p>
-          <h1 id="hero-title" data-content="headline">Nemo Insurance OG</h1>
-          <p data-content="intro">
-            Ein sauberer Startpunkt fuer die Website. Inhalte und Struktur koennen direkt ueber GitHub gepflegt werden.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#angebot">Angebot ansehen</a>
-            <a class="button button-secondary" href="#kontakt">Kontakt</a>
+    <main id="main">
+      <section class="hero" id="home" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">ACT-Übungsfirma · Versicherungen für digitale Geräte</p>
+            <img class="hero-logo" src="assets/logo.svg" alt="NEMO Insurance - Wir sind das, was ihr sucht!" />
+            <h1 id="hero-title">Versicherungsschutz, der einfach verständlich ist.</h1>
+            <p class="lead">NEMO Insurance bietet flexible Versicherungen für Handy, Laptop und Tablet - transparent, fair und digital.</p>
+            <div class="hero-actions" aria-label="Wichtige Aktionen">
+              <a class="button button-primary" href="#antrag">Versicherung anfragen</a>
+              <a class="button button-secondary" href="#produkte">Produkte ansehen</a>
+            </div>
+          </div>
+          <div class="hero-visual reveal" aria-label="Digitale Versicherungslösung für Handy, Laptop und Tablet">
+            <div class="device-scene">
+              <div class="shield-orbit"></div>
+              <div class="device laptop"><span></span></div>
+              <div class="device phone"><span></span></div>
+              <div class="device tablet"><span></span></div>
+              <div class="trust-card trust-card-a">Schutz geprüft</div>
+              <div class="trust-card trust-card-b">Anfrage digital</div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section" id="angebot" aria-labelledby="angebot-title">
-        <div class="section-heading">
-          <p class="eyebrow">Leistungen</p>
-          <h2 id="angebot-title">Angebot</h2>
-        </div>
-        <div class="cards" data-list="services"></div>
+      <section class="section intro-band" aria-label="Positionierung">
+        <div class="intro-item"><strong>Einfach</strong><span>Verständliche Tarife ohne echte Online-Zahlung.</span></div>
+        <div class="intro-item"><strong>Transparent</strong><span>Leistungen, Selbstbehalt und Prämien klar dargestellt.</span></div>
+        <div class="intro-item"><strong>Zuverlässig</strong><span>Langfristige Begleitung für Familien und Unternehmen.</span></div>
       </section>
 
-      <section class="section split" id="ueber-uns" aria-labelledby="about-title">
-        <div>
-          <p class="eyebrow">Profil</p>
-          <h2 id="about-title">Ueber uns</h2>
+      <section class="section" id="produkte" aria-labelledby="produkte-title">
+        <div class="section-heading">
+          <p class="eyebrow">Leistungen und Produkte</p>
+          <h2 id="produkte-title">Flexibler Schutz für deine wichtigsten Geräte.</h2>
+          <p>Wähle Handy, Laptop oder Tablet und finde den passenden Tarif. Preis und Versicherungssummen sind abhängig von Gerät und Tarif.</p>
         </div>
-        <p data-content="about">
-          Hier kommt spaeter die genaue Beschreibung der Uebungsfirma hinein.
-        </p>
+        <div class="product-grid" data-products></div>
+      </section>
+
+      <section class="section process" aria-labelledby="process-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">So funktioniert es</p>
+          <h2 id="process-title">Digital anfragen, persönlich geprüft.</h2>
+        </div>
+        <div class="process-grid">
+          <article><span>01</span><h3>Produkt wählen</h3><p>Handy, Laptop oder Tablet und den passenden Tarif auswählen.</p></article>
+          <article><span>02</span><h3>Daten eintragen</h3><p>Kunden- und Gerätedaten strukturiert an NEMO Insurance senden.</p></article>
+          <article><span>03</span><h3>Prüfung erhalten</h3><p>Die Anfrage wird geprüft. Es findet keine echte Online-Zahlung statt.</p></article>
+        </div>
+      </section>
+
+      <section class="section application" id="antrag" aria-labelledby="antrag-title">
+        <div class="application-copy">
+          <p class="eyebrow">Online-Antrag</p>
+          <h2 id="antrag-title">Versicherung anfragen oder abschließen.</h2>
+          <p>Das Formular sendet deine Angaben als strukturierte E-Mail an NEMO Insurance. Zahlungsdaten, Passwörter, PINs oder Kreditkartendaten werden nicht abgefragt.</p>
+          <div class="notice">Nur Anfrageprozess - keine echte Zahlung und kein kostenpflichtiges Backend.</div>
+        </div>
+
+        <form class="wizard" action="https://formsubmit.co/nemo3018@uebungsfirmen.at" method="POST" target="form-submit-frame" data-wizard-form>
+          <input type="hidden" name="_subject" value="Neuer Versicherungsantrag über die NEMO Website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="Quelle" value="GitHub Pages Website" />
+
+          <div class="wizard-progress" aria-label="Formularfortschritt">
+            <button type="button" class="step-pill active" data-step-jump="0">Produkt</button>
+            <button type="button" class="step-pill" data-step-jump="1">Kunde</button>
+            <button type="button" class="step-pill" data-step-jump="2">Gerät</button>
+            <button type="button" class="step-pill" data-step-jump="3">Prüfen</button>
+          </div>
+
+          <fieldset class="form-step active" data-step="0">
+            <legend>Produkt und Tarif</legend>
+            <label>Produkt auswählen
+              <select name="Produkt" required data-product-select>
+                <option value="">Bitte wählen</option>
+                <option>Handyversicherung</option>
+                <option>Laptopversicherung</option>
+                <option>Tabletversicherung</option>
+              </select>
+            </label>
+            <label>Tarif auswählen
+              <select name="Tarif" required>
+                <option value="">Bitte wählen</option>
+                <option>Displaybruch</option>
+                <option>Wasserschaden</option>
+                <option>Akku-Defekt</option>
+                <option>Diebstahl</option>
+                <option>All-In-Paket</option>
+              </select>
+            </label>
+            <label>Abwicklung
+              <select name="Abwicklung" required>
+                <option>Nur Anfrage - keine echte Zahlung</option>
+              </select>
+            </label>
+          </fieldset>
+
+          <fieldset class="form-step" data-step="1">
+            <legend>Kundendaten</legend>
+            <div class="form-grid two">
+              <label>Vorname<input name="Vorname" autocomplete="given-name" required /></label>
+              <label>Nachname<input name="Nachname" autocomplete="family-name" required /></label>
+            </div>
+            <label>Firma optional<input name="Firma" autocomplete="organization" /></label>
+            <div class="form-grid two">
+              <label>E-Mail<input type="email" name="E-Mail" autocomplete="email" required /></label>
+              <label>Telefon<input type="tel" name="Telefon" autocomplete="tel" required /></label>
+            </div>
+            <label>Adresse<textarea name="Adresse" rows="3" autocomplete="street-address" required></textarea></label>
+          </fieldset>
+
+          <fieldset class="form-step" data-step="2">
+            <legend>Gerätedaten</legend>
+            <div class="form-grid two">
+              <label>Hersteller<input name="Hersteller" required /></label>
+              <label>Modell<input name="Modell" required /></label>
+            </div>
+            <div class="form-grid two">
+              <label>Kaufdatum<input type="date" name="Kaufdatum" required /></label>
+              <label>Kaufpreis in Euro<input type="number" name="Kaufpreis" min="0" step="0.01" required /></label>
+            </div>
+            <label>Seriennummer optional<input name="Seriennummer" /></label>
+          </fieldset>
+
+          <fieldset class="form-step" data-step="3">
+            <legend>Zustimmung und Absenden</legend>
+            <div class="summary-box" data-summary>Bitte fülle die vorherigen Schritte aus.</div>
+            <label class="checkbox-row">
+              <input type="checkbox" name="Zustimmung" value="Angaben korrekt und Prüfung durch NEMO Insurance bestätigt" required />
+              <span>Ich bestätige, dass meine Angaben korrekt sind und die Anfrage von NEMO Insurance geprüft wird.</span>
+            </label>
+          </fieldset>
+
+          <div class="wizard-actions">
+            <button class="button button-secondary dark" type="button" data-prev>Zurück</button>
+            <button class="button button-primary" type="button" data-next>Weiter</button>
+            <button class="button button-primary submit-button" type="submit" data-submit>Antrag absenden</button>
+          </div>
+          <p class="form-success" role="status" data-form-success hidden>Vielen Dank! Ihr Antrag wurde übermittelt und wird von NEMO Insurance geprüft.</p>
+        </form>
+        <iframe class="hidden-frame" name="form-submit-frame" title="Formularübermittlung"></iframe>
+      </section>
+
+      <section class="section about" id="ueber-uns" aria-labelledby="about-title">
+        <div class="about-copy">
+          <p class="eyebrow">Über uns</p>
+          <h2 id="about-title">Sicherheit, die nahbar bleibt.</h2>
+          <p>Unsere Kunden stehen im Mittelpunkt. Wir schaffen Sicherheit durch individuelle Versicherungslösungen, begleiten Familien und Unternehmen langfristig und machen Versicherungen einfach, transparent und fair.</p>
+          <p>NEMO Insurance OG ist eine ACT-Übungsfirma an der Handelsakademie Innsbruck. Die Website bildet einen realitätsnahen Geschäftsprozess ab, ohne echte Zahlungen oder sensible Zugangsdaten zu verwenden.</p>
+        </div>
+        <div class="values-grid" aria-label="Werte von NEMO Insurance">
+          <span>Verantwortung</span>
+          <span>Zuverlässigkeit</span>
+          <span>Professionalität</span>
+          <span>Nachhaltigkeit</span>
+          <span>Ehrlichkeit</span>
+          <span>Kundennähe</span>
+        </div>
       </section>
 
       <section class="section contact" id="kontakt" aria-labelledby="contact-title">
-        <div>
+        <div class="contact-copy">
           <p class="eyebrow">Kontakt</p>
-          <h2 id="contact-title">Bereit fuer den naechsten Schritt?</h2>
+          <h2 id="contact-title">Wir beraten klar, freundlich und direkt.</h2>
+          <address>
+            <strong>NEMO Insurance OG</strong><br />
+            Karl-Schönherr-Straße 2, Handelsakademie Innsbruck<br />
+            Telefon: <a href="tel:+4351258100720">0512 / 581007 - 20 oder 21</a><br />
+            Fax: 0512 / 581007 - 32<br />
+            E-Mail: <a href="mailto:nemo3018@uebungsfirmen.at">nemo3018@uebungsfirmen.at</a>
+          </address>
         </div>
-        <a class="button button-primary" data-content="contactEmail" href="mailto:office@example.com">office@example.com</a>
+        <form class="contact-form" action="https://formsubmit.co/nemo3018@uebungsfirmen.at" method="POST" target="contact-submit-frame" data-contact-form>
+          <input type="hidden" name="_subject" value="Neue Kontaktanfrage über die NEMO Website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <label>Name<input name="Name" autocomplete="name" required /></label>
+          <label>E-Mail<input type="email" name="E-Mail" autocomplete="email" required /></label>
+          <label>Betreff<input name="Betreff" required /></label>
+          <label>Nachricht<textarea name="Nachricht" rows="5" required></textarea></label>
+          <button class="button button-primary" type="submit">Nachricht senden</button>
+          <p class="form-success" role="status" data-contact-success hidden>Vielen Dank! Ihre Nachricht wurde übermittelt.</p>
+        </form>
+        <iframe class="hidden-frame" name="contact-submit-frame" title="Kontaktformularübermittlung"></iframe>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>&copy; <span id="year"></span> Nemo Uebungsfirma</span>
-      <span>Gespeichert und versioniert auf GitHub</span>
+      <div>
+        <strong>NEMO Insurance OG</strong>
+        <span>Karl-Schönherr-Straße 2, Handelsakademie Innsbruck</span>
+      </div>
+      <div>
+        <span>UID: ATU70213510</span>
+        <span>Firmenbuchnummer: 3018</span>
+      </div>
+      <nav aria-label="Footer Navigation">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
     </footer>
 
     <script src="assets/app.js" type="module"></script>
