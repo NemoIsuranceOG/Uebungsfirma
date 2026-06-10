@@ -39,7 +39,7 @@
 }
 
 .hero-copy {
-  width: min(650px, 52vw);
+  width: min(760px, 54vw);
 }
 
 .hero-logo {
@@ -48,8 +48,8 @@
 }
 
 h1 {
-  max-width: 13ch;
-  font-size: clamp(3.7rem, 5.8vw, 6.35rem);
+  max-width: 760px;
+  font-size: clamp(3.45rem, 4.45vw, 5.15rem);
 }
 
 h2 {
