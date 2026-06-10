@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Website der Nemo Uebungsfirma" />
+    <title>Nemo Uebungsfirma</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Nemo Uebungsfirma Startseite">
+        <span class="brand-mark">N</span>
+        <span>Nemo Uebungsfirma</span>
+      </a>
+      <nav class="site-nav" aria-label="Hauptnavigation">
+        <a href="#angebot">Angebot</a>
+        <a href="#ueber-uns">Ueber uns</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <p class="eyebrow" data-content="eyebrow">Uebungsfirma</p>
+          <h1 id="hero-title" data-content="headline">Nemo Insurance OG</h1>
+          <p data-content="intro">
+            Ein sauberer Startpunkt fuer die Website. Inhalte und Struktur koennen direkt ueber GitHub gepflegt werden.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#angebot">Angebot ansehen</a>
+            <a class="button button-secondary" href="#kontakt">Kontakt</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="angebot" aria-labelledby="angebot-title">
+        <div class="section-heading">
+          <p class="eyebrow">Leistungen</p>
+          <h2 id="angebot-title">Angebot</h2>
+        </div>
+        <div class="cards" data-list="services"></div>
+      </section>
+
+      <section class="section split" id="ueber-uns" aria-labelledby="about-title">
+        <div>
+          <p class="eyebrow">Profil</p>
+          <h2 id="about-title">Ueber uns</h2>
+        </div>
+        <p data-content="about">
+          Hier kommt spaeter die genaue Beschreibung der Uebungsfirma hinein.
+        </p>
+      </section>
+
+      <section class="section contact" id="kontakt" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2 id="contact-title">Bereit fuer den naechsten Schritt?</h2>
+        </div>
+        <a class="button button-primary" data-content="contactEmail" href="mailto:office@example.com">office@example.com</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>&copy; <span id="year"></span> Nemo Uebungsfirma</span>
+      <span>Gespeichert und versioniert auf GitHub</span>
+    </footer>
+
+    <script src="assets/app.js" type="module"></script>
+  </body>
+</html>
