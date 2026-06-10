@@ -1,0 +1,21 @@
+{
+  "eyebrow": "Uebungsfirma",
+  "headline": "Nemo Insurance OG",
+  "intro": "Ein sauberer Startpunkt fuer die Website. Inhalte und Struktur koennen direkt ueber GitHub gepflegt werden.",
+  "about": "Hier kommt spaeter die genaue Beschreibung der Uebungsfirma hinein. Die Inhalte sind bewusst in einer eigenen Datei gespeichert, damit sie versioniert und einfach angepasst werden koennen.",
+  "contactEmail": "office@example.com",
+  "services": [
+    {
+      "title": "Beratung",
+      "text": "Platzhalter fuer euer erstes Angebot oder eure wichtigste Leistung."
+    },
+    {
+      "title": "Versicherung",
+      "text": "Platzhalter fuer Produkte, Services oder Schwerpunkte der Uebungsfirma."
+    },
+    {
+      "title": "Service",
+      "text": "Platzhalter fuer Kontakt, Betreuung oder interne Arbeitsablaeufe."
+    }
+  ]
+}
